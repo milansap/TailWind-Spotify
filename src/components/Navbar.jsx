@@ -83,9 +83,12 @@ function Navbar() {
             <div className="p-5 mt-4 h-full  font-bold text-base w-full rounded-t-xl m-2 text-white bg-neutral-800">
               <h3>Create Your first Playists</h3>
               <p>It's easy,We'll help you</p>
-              <button className="w-32 font-bold h-9 mt-14 rounded-full shadow-gray-300 text-black text-sm bg-white ">
+              <NavLink
+                to="CreateList2"
+                className="w-32 font-bold h-9 mt-14 rounded-full shadow-gray-300 text-black text-sm bg-white "
+              >
                 Create playlist
-              </button>
+              </NavLink>
             </div>
           </div>
           <div className="flex text-xs p-2 text-white justify-between">

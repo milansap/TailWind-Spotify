@@ -3,7 +3,7 @@ import { MdKeyboardArrowRight } from "react-icons/md";
 import { MdKeyboardArrowLeft } from "react-icons/md";
 import Footer from "../Footer";
 
-import { Outlet, useLocation } from "react-router-dom";
+import { NavLink, Outlet, useLocation } from "react-router-dom";
 import { IoSearch } from "react-icons/io5";
 import SignUpForFree from "../../pages/SignUpForFree";
 import Navbar from "../Navbar";
@@ -45,10 +45,15 @@ function Content() {
                 )}
               </div>
               <div className=" flex  p-4">
-                <button className="mr-10">Sign Up</button>
-                <button className=" ml-3 px-5 py-3 rounded-3xl bg-white text-black">
+                <NavLink to="signup" className="mr-10 mt-3">
+                  Sign Up
+                </NavLink>
+                <NavLink
+                  to="login"
+                  className=" ml-3 px-5 py-3 rounded-3xl bg-white text-black"
+                >
                   Log in
-                </button>
+                </NavLink>
               </div>
             </nav>
             <Outlet />

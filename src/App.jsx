@@ -5,6 +5,9 @@ import Search from "./pages/Search";
 import Home from "./pages/Home";
 import Layout from "./components/Layout/Layout";
 import CreatePlayList from "./pages/CreatePlayList";
+import CreatePlayList2 from "./pages/CreatePlayList2";
+import Login from "./pages/login/Login";
+import SignUp from "./pages/login/SignUp";
 
 function App() {
   return (
@@ -15,6 +18,9 @@ function App() {
             <Route path="" element={<Home />} />
             <Route path="/search" element={<Search />} />
             <Route path="createlist" element={<CreatePlayList />} />
+            <Route path="createList2" element={<CreatePlayList2 />} />
+            <Route path="login" element={<Login />} />
+            <Route path="signup" element={<SignUp />} />
           </Route>
         </Route>
       </Routes>
