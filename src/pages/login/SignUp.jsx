@@ -4,12 +4,15 @@ import { AiFillApple } from "react-icons/ai";
 
 function SignUp() {
   return (
-    <div className="flex  justify-center ">
-      <div className="w-1/2 h-auto  flex flex-col  rounded-2xl bg-neutral-800 ">
-        <div className="text-center h-28 flex items-center justify-center">
-          <h1 className="text-[30px] font-thin ">Sign up</h1>
+    <div className="flex flex-col bg-neutral-900 items-center  justify-center ">
+      <div className="w-1/2 h-auto  flex flex-col justify-center text-white    rounded  ">
+        <div className="text-center  h-28 flex items-center justify-center">
+          <h1 className="text-[40px]  font-bold ">
+            Sign up to Start <br />
+            listening
+          </h1>
         </div>
-        <div className=" m-2 text-center">
+        <div className=" m-2 mt-8 text-center">
           <input
             type="text"
             className="w-1/2 h-8  bg-stone-600 rounded-xl"
@@ -55,7 +58,7 @@ function SignUp() {
             <FaGoogle size={"20px"} className="text-green-600 " />
             <h3>Sign in with Google</h3>
           </div>
-          <div className="w-1/2 m-2 mb-10 flex  cursor-pointer  items-center justify-center h-8 rounded-xl border">
+          <div className="w-1/2 m-2 mb-[51px] flex  cursor-pointer  items-center justify-center h-8 rounded-xl border">
             <AiFillApple size={"28px"} />
 
             <h3>Sign in with Google</h3>

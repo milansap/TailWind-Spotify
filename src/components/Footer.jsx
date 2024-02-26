@@ -6,18 +6,18 @@ import { NavLink } from "react-router-dom";
 function Footer() {
   return (
     <div>
-      <div className="px-2 pt-8  h-32 flex flex-col gap-24">
+      <div className="px-2 pt-8 bg-neutral-700  overflow-auto  flex flex-col ">
         <div className="">
-          <div className="flex justify-between">
+          <div className="flex  justify-between">
             <div className=" w-1/2 flex justify-between">
               <div className="flex flex-col">
-                <h1 className="p-2">Company</h1>
+                <h1 className="p-2 font-bold">Company</h1>
                 <NavLink style={{ padding: "0.3rem" }}>About</NavLink>
                 <NavLink style={{ padding: "0.3rem" }}>Jobs</NavLink>
                 <NavLink style={{ padding: "0.3rem" }}>For the Record</NavLink>
               </div>
               <div className="flex flex-col">
-                <h1 className="p-2">Communities</h1>
+                <h1 className="p-2 font-bold">Communities</h1>
                 <NavLink style={{ padding: "0.3rem" }}>For Artists</NavLink>
                 <NavLink style={{ padding: "0.3rem" }}>Developers</NavLink>
                 <NavLink style={{ padding: "0.3rem" }}>Advertising</NavLink>
@@ -25,7 +25,7 @@ function Footer() {
                 <NavLink style={{ padding: "0.3rem" }}>Vendors</NavLink>
               </div>
               <div className="flex flex-col">
-                <h1 className="p-2">Useful links</h1>
+                <h1 className="p-2 font-bold">Useful links</h1>
                 <NavLink style={{ padding: "0.3rem" }}>Support</NavLink>
                 <NavLink style={{ padding: "0.3rem" }}>Free Mobile App</NavLink>
               </div>

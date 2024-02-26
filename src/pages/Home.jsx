@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 function Home() {
   return (
     <div>
-      <div className=" p-2 w-full ">
+      <div className=" p-2 bg-neutral-700  ">
         <div className="flex w-full py-2 justify-between">
           <h1 className="text-2xl font-bold ">Spotify Playlists</h1>
 

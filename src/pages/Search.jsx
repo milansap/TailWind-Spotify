@@ -1,8 +1,8 @@
 function Search() {
   return (
-    <div className="h-1/5 ">
+    <div className="p-2 w-full h-[81vh]  ">
       <h1 className="px-5 font-bold">Browse all</h1>
-      <div className="h-full overflow-auto">
+      <div className="h-[97%] overflow-auto">
         <div className="p-5 gap-8 flex ">
           <div className="rounded-2xl overflow-hidden  w-44 h-44 bg-red-500">
             <h1 className="p-3 font-bold text-xl"> Podcasts</h1>

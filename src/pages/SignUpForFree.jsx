@@ -1,6 +1,6 @@
 function SignUpForFree() {
   return (
-    <div className="flex justify-between  gap- w-full bg-white  h-full ">
+    <div className="flex justify-between   w-full bg-white   ">
       <div className="text-sm flex justify-between px-4 font-bold text-white bg-gradient-to-r w-full from-fuchsia-500 to-cyan-500 ">
         <div className="div">
           <h4 className=""> preview of Spotify</h4>

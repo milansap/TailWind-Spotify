@@ -13,8 +13,7 @@ function Navbar() {
   console.log(location.pathname);
   return (
     <div>
-      {/* <Content stateFromParent={search} /> */}
-      <div className="flex w-full relative flex-col">
+      <div className="flex w-[20vw]  flex-col">
         <div className="md:w-full h-1/4  p-2 mt-1 flex flex-col bg-neutral-900 rounded-md  border-none ">
           <div className="flex items-center ">
             <PiSpotifyLogoFill

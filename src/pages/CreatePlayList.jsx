@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { API_URL } from "../config/EnvironmentVariables";
 
 function CreatePlayList() {
   const [api, setApi] = useState("");
@@ -16,7 +17,7 @@ function CreatePlayList() {
   }
 
   async function getting() {
-    let a = await axios.get("http://localhost:5001/msg/usa");
+    let a = await axios.get(`${API_URL}/usa`);
 
     setGet(a.data);
     console.log(a.data);
@@ -33,7 +34,7 @@ function CreatePlayList() {
   }
   async function country() {
     try {
-      let asa = await axios.get("http://localhost:5001/msg/country");
+      let asa = await axios.get(`${API_URL}/country`);
       console.log(asa.data);
       setInfo(asa.data);
     } catch (error) {
@@ -43,7 +44,7 @@ function CreatePlayList() {
   }
   async function innfo() {
     try {
-      let my = await axios.get("http://localhost:5001/msg");
+      let my = await axios.get(`${API_URL}`);
       console.log(my.data);
       setData(my.data);
     } catch (error) {
