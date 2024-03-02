@@ -12,22 +12,80 @@ function Footer() {
             <div className=" w-1/2 flex justify-between">
               <div className="flex flex-col">
                 <h1 className="p-2 font-bold">Company</h1>
-                <NavLink style={{ padding: "0.3rem" }}>About</NavLink>
-                <NavLink style={{ padding: "0.3rem" }}>Jobs</NavLink>
-                <NavLink style={{ padding: "0.3rem" }}>For the Record</NavLink>
+                <NavLink
+                  to="/about"
+                  style={{ padding: "0.3rem" }}
+                  className="hover:underline "
+                >
+                  About
+                </NavLink>
+                <NavLink
+                  style={{ padding: "0.3rem" }}
+                  className="hover:underline "
+                >
+                  Jobs
+                </NavLink>
+                <NavLink
+                  style={{ padding: "0.3rem" }}
+                  className="hover:underline "
+                >
+                  For the Record
+                </NavLink>
               </div>
               <div className="flex flex-col">
                 <h1 className="p-2 font-bold">Communities</h1>
-                <NavLink style={{ padding: "0.3rem" }}>For Artists</NavLink>
-                <NavLink style={{ padding: "0.3rem" }}>Developers</NavLink>
-                <NavLink style={{ padding: "0.3rem" }}>Advertising</NavLink>
-                <NavLink style={{ padding: "0.3rem" }}>Investors</NavLink>
-                <NavLink style={{ padding: "0.3rem" }}>Vendors</NavLink>
+                <NavLink
+                  style={{ padding: "0.3rem" }}
+                  className="hover:underline "
+                >
+                  For Artists
+                </NavLink>
+                <NavLink
+                  style={{ padding: "0.3rem" }}
+                  className="hover:underline "
+                >
+                  Developers
+                </NavLink>
+                <NavLink
+                  style={{ padding: "0.3rem" }}
+                  className="hover:underline "
+                >
+                  Advertising
+                </NavLink>
+                <NavLink
+                  style={{ padding: "0.3rem" }}
+                  className="hover:underline "
+                >
+                  Investors
+                </NavLink>
+                <NavLink
+                  style={{ padding: "0.3rem" }}
+                  className="hover:underline "
+                >
+                  Vendors
+                </NavLink>
               </div>
               <div className="flex flex-col">
                 <h1 className="p-2 font-bold">Useful links</h1>
-                <NavLink style={{ padding: "0.3rem" }}>Support</NavLink>
-                <NavLink style={{ padding: "0.3rem" }}>Free Mobile App</NavLink>
+                <NavLink
+                  style={{ padding: "0.3rem" }}
+                  className="hover:underline "
+                >
+                  Support
+                </NavLink>
+                <NavLink
+                  style={{ padding: "0.3rem" }}
+                  className="hover:underline "
+                >
+                  Free Mobile App
+                </NavLink>
+                <NavLink
+                  to="/contact"
+                  style={{ padding: "0.3rem" }}
+                  className="hover:underline "
+                >
+                  Contact us
+                </NavLink>
               </div>
             </div>
             <div className="flex gap-5 justify-between">

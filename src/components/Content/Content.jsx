@@ -31,7 +31,7 @@ function Content() {
               <div className="pt-3  flex   ">
                 <IoSearch className=" ml-2 flex justify-center     " />
                 <input
-                  className="w-96 h-12   bg-neutral-800 text-black rounded-full"
+                  className="w-96 h-12   bg-neutral-800  rounded-full"
                   type="text"
                   placeholder="         What do you want to play?"
                 />

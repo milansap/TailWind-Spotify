@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { API_URL } from "../config/EnvironmentVariables";
+import { API_URL } from "../../config/EnvironmentVariables";
 
 function CreatePlayList() {
   const [api, setApi] = useState("");

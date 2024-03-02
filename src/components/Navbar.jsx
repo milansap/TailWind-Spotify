@@ -15,47 +15,47 @@ function Navbar() {
     <div>
       <div className="flex w-[20vw]  flex-col">
         <div className="md:w-full h-1/4  p-2 mt-1 flex flex-col bg-neutral-900 rounded-md  border-none ">
-          <div className="flex items-center ">
+          <NavLink className="flex items-center ">
             <PiSpotifyLogoFill
               size={"1.8em"}
               color="white"
               style={{ margin: "0px 10px" }}
             />
             <h2 className="text-white  text-base font-bold">Spotify</h2>
-          </div>
-          <div className="flex items-center p-1 ">
+          </NavLink>
+          <NavLink to="" className="flex items-center p-1 ">
             <GoHomeFill
               size={"2em"}
               color="white"
               style={{ margin: "10px 10px" }}
             />
             <NavLink
+              to=""
               onClick={() => {
                 // setSearch(false);
               }}
-              to=""
               className="text-white 
               font-bold text-sm"
             >
               Home
             </NavLink>
-          </div>
-          <div className="flex items-center p-1">
+          </NavLink>
+          <NavLink to="/search" className="flex items-center p-1">
             <FiSearch
               size={"2em"}
               color="white"
               style={{ margin: "10px 10px" }}
             />
             <NavLink
+              to="/search"
               onClick={() => {
                 // setSearch(true);
               }}
-              to="/search"
               className="text-slate-300 hover:text-white font-bold text-sm"
             >
               Search
             </NavLink>
-          </div>
+          </NavLink>
         </div>
         <div className="md:w-full h-1\4 p-4  mt-2 flex flex-col bg-neutral-900 rounded-md border-none   ">
           <div className="flex justify-between  ">
