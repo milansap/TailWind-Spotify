@@ -1,5 +1,5 @@
 function Download() {
-  return <div>Download</div>;
+  return <div className="text-black">Download</div>;
 }
 
 export default Download;

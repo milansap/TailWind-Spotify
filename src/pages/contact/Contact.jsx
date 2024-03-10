@@ -36,8 +36,8 @@ function Contact() {
     setMessage("");
   }
   return (
-    <div className="container">
-      <h1 className="text-center text-3xl p-3 text-slate-400">Contact Us</h1>
+    <div className="container bg-neutral-700">
+      <h1 className="text-center text-3xl p-3 text-slate-200">Contact Us</h1>
       <section className="text-gray-600  body-font relative">
         <div className="container px-5 py-24 mx-auto flex sm:flex-nowrap flex-wrap">
           <div className="lg:w-1/ md:w-1/2 bg-gray-300 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative">

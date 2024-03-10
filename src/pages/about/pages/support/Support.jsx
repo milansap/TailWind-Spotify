@@ -17,7 +17,9 @@ function Support() {
       console.log(pre.data);
       setName(pre.data);
     } catch (error) {
-      setErr(error);
+      if (error.response) {
+        setErr(error.response.data);
+      } else setErr(error.message);
       console.log(error);
     }
   }
@@ -28,8 +30,9 @@ function Support() {
 
   return (
     <div>
-      <div>{err}</div>
+      <div>{err.response.data}</div>
       <div>{name.title}</div>
+      <div>{name.image}</div>
       <div>{name.Price}</div>
     </div>
   );

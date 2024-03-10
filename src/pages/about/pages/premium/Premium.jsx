@@ -17,7 +17,9 @@ function Premium() {
       console.log(pre.data);
       setName(pre.data);
     } catch (error) {
-      setErr(error);
+      if (error.response) {
+        setErr(error.response.data);
+      } else setErr(error.message);
       console.log(error);
     }
   }
@@ -29,8 +31,11 @@ function Premium() {
   return (
     <div>
       <div>{err}</div>
-      <div>{name.title}</div>
-      <div>{name.Price}</div>
+      <div className="flex flex-col items-center justify-center">
+        <div>{name.title}</div>
+        <img src={name.image} />
+        <div>{name.Description}</div>
+      </div>
     </div>
   );
 }

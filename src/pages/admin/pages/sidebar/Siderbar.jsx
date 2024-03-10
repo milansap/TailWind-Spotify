@@ -21,7 +21,7 @@ function Siderbar() {
         </NavLink>
       </div>
       <div className="flex flex-col justify-center gap-10 items-center ">
-        <NavLink to="dashboard" className="hover:text-lg  h-8   ">
+        <NavLink to="/admin" className="hover:text-lg  h-8   ">
           <IoMdHome color="white" size={"2em"} />
         </NavLink>
         <NavLink className="hover:text-xl h-8">
@@ -37,9 +37,9 @@ function Siderbar() {
           <MdShield color="white" size={"2em"} />
         </NavLink>
         <div className="flex flex-col mt-32 gap-2 justify-start">
-          <div className="m-">
+          <NavLink to="useradmin">
             <MdAccountCircle color="white" size={"2em"} />
-          </div>
+          </NavLink>
           <div>
             <IoSettingsSharp color="white" size={"2em"} />
           </div>
