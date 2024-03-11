@@ -1,14 +1,21 @@
 import { Outlet } from "react-router-dom";
 import UserNav from "./navbar/UserNav";
 import SideBar from "./sidebar/SideBar";
+import { useContext } from "react";
+import GlobalContext from "../../../GlobalContext";
 
 function UserAdmin() {
+  const { theme } = useContext(GlobalContext);
+  const { background, color } = theme;
   return (
-    <div className="w-full fixed">
+    <div
+      style={{ backgroundColor: background, color: color }}
+      className="w-full fixed"
+    >
       <UserNav />
       <div className="flex">
         <SideBar />
-        <div className="bg-slate-900 w-full">
+        <div className=" w-full">
           <Outlet />
         </div>
       </div>

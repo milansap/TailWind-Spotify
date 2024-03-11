@@ -26,6 +26,7 @@ function Footer() {
                   Jobs
                 </NavLink>
                 <NavLink
+                  to="/reactform"
                   style={{ padding: "0.3rem" }}
                   className="hover:underline "
                 >

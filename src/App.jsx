@@ -25,10 +25,11 @@ import GlobalContext from "./pages/GlobalContext";
 import { useState } from "react";
 import NOtFound from "./pages/PageNotFound/NOtFound";
 import Sales from "./pages/admin/pages/userAdmin/pages/U-Dashboard/Sales";
+import ReactHookForm from "./pages/forTheRecord/ReactHookForm";
 
 function App() {
   const [theme, setTheme] = useState({
-    background: "black",
+    background: " 	#0F172A",
     color: "white",
   });
 
@@ -43,10 +44,15 @@ function App() {
             <Route path="/createList2" element={<CreatePlayList2 />} />
           </Route>
 
+          <Route path="/reactform" element={<LoginLayout />}>
+            <Route index element={<ReactHookForm />} />
+          </Route>
+
           <Route path="/login" element={<LoginLayout />}>
             <Route path="DynRoute/:id" element={<DynRoute />} />
             <Route index element={<Login />} />
           </Route>
+
           <Route path="/contact" element={<LoginLayout />}>
             <Route index element={<Contact />} />
           </Route>
