@@ -42,6 +42,7 @@ function Footer() {
                   For Artists
                 </NavLink>
                 <NavLink
+                  to="/datatable"
                   style={{ padding: "0.3rem" }}
                   className="hover:underline "
                 >

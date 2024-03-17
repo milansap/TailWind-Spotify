@@ -26,6 +26,7 @@ import { useState } from "react";
 import NOtFound from "./pages/PageNotFound/NOtFound";
 import Sales from "./pages/admin/pages/userAdmin/pages/U-Dashboard/Sales";
 import ReactHookForm from "./pages/forTheRecord/ReactHookForm";
+import DataTable from "./pages/table/DataTable";
 
 function App() {
   const [theme, setTheme] = useState({
@@ -42,6 +43,9 @@ function App() {
             <Route path="/search" element={<Search />} />
             <Route path="/createlist" element={<CreatePlayList />} />
             <Route path="/createList2" element={<CreatePlayList2 />} />
+          </Route>
+          <Route path="/datatable" element={<LoginLayout />}>
+            <Route index element={<DataTable />} />
           </Route>
 
           <Route path="/reactform" element={<LoginLayout />}>
