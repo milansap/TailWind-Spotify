@@ -49,6 +49,27 @@ function Footer() {
                   Developers
                 </NavLink>
                 <NavLink
+                  to="/database"
+                  style={{ padding: "0.3rem" }}
+                  className="hover:underline "
+                >
+                  Data for backend
+                </NavLink>
+                <NavLink
+                  to="/LoginCookie"
+                  style={{ padding: "0.3rem" }}
+                  className="hover:underline "
+                >
+                  Login For Cookies
+                </NavLink>
+                <NavLink
+                  to="/register"
+                  style={{ padding: "0.3rem" }}
+                  className="hover:underline "
+                >
+                  Register
+                </NavLink>
+                <NavLink
                   style={{ padding: "0.3rem" }}
                   className="hover:underline "
                 >
