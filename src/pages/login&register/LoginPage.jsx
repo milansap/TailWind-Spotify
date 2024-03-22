@@ -1,7 +1,35 @@
 import { useForm } from "react-hook-form";
-import { NavLink } from "react-router-dom";
+import { NavLink, Navigate } from "react-router-dom";
+import Cookies from "js-cookie";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
+import { useState } from "react";
+import { motion } from "framer-motion";
 
 function LoginPage() {
+  const [success, setsuccess] = useState("");
+  const [errorMsg, setErrorMsg] = useState("");
+  const URL = "http://localhost:5001";
+  const navigate = useNavigate("");
+  const cookie = Cookies.get("token");
+
+  async function posting(data) {
+    console.log(data);
+    try {
+      const cookieData = await axios({
+        method: "post",
+        url: `${URL}/loginCookie`,
+        data: data,
+      });
+      setsuccess(cookieData.data.msg);
+
+      console.log(cookieData.data.msg);
+      Cookies.set("token", cookieData.data.token, { path: "" });
+      navigate("/useradmin");
+    } catch (err) {
+      setErrorMsg(err.response.data);
+    }
+  }
   const {
     register,
     handleSubmit,
@@ -12,51 +40,66 @@ function LoginPage() {
   console.log(errors);
 
   return (
-    <div className=" flex flex-col items-center m-3 p-10 w-auto h-[80vh]">
-      <div>
-        <h1 className="text-[50px] font-mono m-2">Login</h1>
-        <p>Hi,Welcome back.</p>
-        <form className="flex  flex-col " onSubmit={handleSubmit()}>
-          <label>
-            <input
-              className="p-2  w-[30vw] my-5 bg-neutral-200"
-              type="email"
-              placeholder="Email"
-              {...register("Email", { required: "enter your email!!" })}
-            />
-          </label>
-          <div className="text-red">{errors.email?.message}</div>
-          <label>
-            <input
-              className="p-2 w-[30vw] my-5 bg-neutral-200 rounded"
-              type="password"
-              placeholder="password"
-              {...register("Password", {
-                required: "Enter Your password!",
-                min: 8,
-              })}
-            />
-          </label>
-          <div className="text-red">{errors.password?.message}</div>
-          <div className="flex justify-between ">
-            <label>
-              <input
-                type="checkbox"
-                {...register("check", { required: true })}
-              />
-              Remember me
-            </label>
-            <NavLink style={{ color: "blue" }}>Forget password?</NavLink>
+    <>
+      <motion.div
+        initial={{ opacity: 0, y: -100 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 2 }}
+      >
+        {!cookie ? (
+          <div className=" flex flex-col items-center m-3 p-10 w-auto h-[80vh]">
+            <div>
+              <h1 className="text-[50px] font-mono m-2">Login</h1>
+              <p>Hi,Welcome back.</p>
+              <form
+                className="flex  flex-col "
+                onSubmit={handleSubmit(posting)}
+              >
+                <label>
+                  <input
+                    className="p-2  w-[30vw] my-5 bg-neutral-200"
+                    type="email"
+                    placeholder="Email"
+                    {...register("email", { required: "enter your email!!" })}
+                  />
+                </label>
+                <div className="text-red-400">{errors.email?.message}</div>
+
+                <label>
+                  <input
+                    className="p-2 w-[30vw] my-5 bg-neutral-200 rounded"
+                    type="password"
+                    placeholder="password"
+                    {...register("password", {
+                      required: "Enter Your password!",
+                      min: 8,
+                    })}
+                  />
+                </label>
+                <div className="text-red-400">{errorMsg}</div>
+                <div className="text-red-400">{errors.password?.message}</div>
+                <div className="flex justify-between ">
+                  <label>
+                    <input type="checkbox" {...register("check")} />
+                    Remember me
+                  </label>
+                  <NavLink style={{ color: "blue" }}>Forget password?</NavLink>
+                </div>
+                <div>{success}</div>
+                <button
+                  className="bg-blue-700 w-[50%] my-5 h-8 rounded-lg"
+                  type="submit"
+                >
+                  Log in
+                </button>
+              </form>
+            </div>
           </div>
-          <button
-            className="bg-blue-700 w-[50%] my-5 h-8 rounded-lg"
-            type="submit"
-          >
-            Log in
-          </button>
-        </form>
-      </div>
-    </div>
+        ) : (
+          <Navigate to={"/useradmin"} />
+        )}
+      </motion.div>
+    </>
   );
 }
 

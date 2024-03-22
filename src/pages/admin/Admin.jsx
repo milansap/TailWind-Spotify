@@ -8,7 +8,7 @@ function Admin(props) {
   const { children } = props;
   const navigate = useNavigate();
 
-  function lagout() {
+  function logout() {
     Cookies.remove("token", { path: "/" });
     navigate("/login");
   }
@@ -18,7 +18,7 @@ function Admin(props) {
       <MainContent />
 
       <div className="w-[100%]">{children}</div>
-      <button className=" bg-black text-white" onClick={lagout}>
+      <button className=" bg-black text-white" onClick={logout}>
         Sign Out
       </button>
     </div>

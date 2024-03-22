@@ -3,6 +3,7 @@ import Navbar from "../Navbar";
 import Footer from "../Footer";
 import Content from "../Content/Content";
 import SignUpForFree from "../../pages/SignUpForFree";
+import { motion } from "framer-motion";
 
 function Layout() {
   return (
@@ -11,15 +12,28 @@ function Layout() {
         <div className="flex:2  m-1">
           <Navbar />
         </div>
-        <div className="flex:4  m-1 rounded-t-2xl  bg-neutral-900 w-[78%]">
-          <div className=" text-white  w-full">
-            <Content />
-            <div className="h-[77vh] rounded-b-2xl bg-neutral-800 overflow-auto">
-              <Outlet />
 
-              <Footer />
+        <div className="flex:4  m-1 rounded-t-2xl  bg-neutral-900 w-[78%]">
+          <motion.div
+            initial={{ opacity: 0, y: 200 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+          >
+            <div className=" text-white  w-full">
+              <Content />
+              <motion.div
+                initial={{ opacity: 0, y: 200 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1 }}
+              >
+                <div className="h-[77vh] rounded-b-2xl bg-neutral-800 overflow-auto">
+                  <Outlet />
+
+                  <Footer />
+                </div>
+              </motion.div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
       <div className="flex:2">
